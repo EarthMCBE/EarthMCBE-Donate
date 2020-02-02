@@ -42,11 +42,11 @@
     </style> 
  </head> 
  <body> 
-  <div class="hero" style="background: url('lib/img/background-1.jpg')center center; background-size:cover;"> 
+  <div class="hero" id="background" style="background-size:cover;"> 
    <div class="hero-body"> 
     <div class="container"> 
      <div class="hero bg-dark-tou"> 
-      <div class="hero-body"> 
+      <div class="hero-body" style="padding-bottom: 0px;"> 
        <div class="container has-text-centered"> 
         <h1 class="title text-pink-light"> 支持一下 </h1> 
         <h2 class="subtitle text-pink-light"> 捐助 </h2> 
@@ -55,7 +55,7 @@
       </div> 
      </div> 
      <div class="hero bg-dark-tou"> 
-      <div class="hero-body"> 
+      <div class="hero-body" style="padding-top: 0px;"> 
        <div class="container has-text-centered"> 
         <h2 class="subtitle text-cyan"> 只有共同呵护，服务器才能更长久。</h2> 
         <h2 class="subtitle text-cyan"> 如果您认为服务器很棒，请支持我们！ </h2> 
@@ -79,4 +79,10 @@
    </div> 
   </div>  
  </body>
+ <script>
+     max=2
+     min=1
+     parseInt(Math.random()*(max-min+1)+min,10);
+     document.getElementById("background").style.cssText+="background: url('lib/img/background-"+Math.floor(Math.random()*(max-min+1)+min)+".jpg')center center;" 
+ </script>
 </html>
